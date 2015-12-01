@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+    <!-- (c) MikeZheng -->
+    <!-- https://github.com/Mike-Zheng -->
+    <!--
+                                                                           ;;                       
+                                ,.                                        ,      ,                  
+                                  . ,                     ::.,FFFF  U,   ,:   :FJFJFf               
+       ;;,                                          ::J;jFFFU FFFF       u    F:F:FjF               
+      JFFFFu         ;,                       .FFFFfFFUF;FU;F  ,    :;  .     JFjuFF;               
+     ;ffFF:FU         . .:           ..;,,FFFF,FFFF:FJ j     , :: FUFF        fFFFF;                
+     JF.JF;UF,                      :FFFF,FFFF..J .     :,Jj.FFFF;FF FJ       . ,                   
+     :FFFFFFF                        FFJF. ,       jFFFJFFFJF:fFF  ;         .            ::,       
+      :FFFFF:                        .,  ..,; UFFFjuF: FFF,;u         .     .            .;         
+           ,                             FFFFf.FFFF J, .            fJFF;  ,             :,         
+            ,              :,  ..        ,FFFU :.  .              .FJjfFf  ,            ,;          
+             ,                  .                  ;,              FFFJF           .:J.             
+             .                                  :;: ;  ..          .j,        :fFFFFFj              
+              ,                   :,               . :;. :;       .          fFFFFFFf  .            
+               .                .FFFF:              ::  ,:.       .         :FjUFFF;  ,u            
+                :,  ..          :FFUFF          ,;,  .  ..      ..                                  
+                     .           ;FFF    :            ,,    ,  .                       .,;          
+                                   .    .F                 ,  .      .,:,          ::;.. .,.        
+              ;J                                  .. ,  :    ..   ,FFFFFFF         ,. ,.,  .        
+                                   .,             ,;::    .     ,u;:uFFFFFF        .  ...  ,        
+                      ,jujf:      uFFFJfu::,,  .  ,  .    : .  ,jF; ,,;JFFF        . .;::; .    ;fF:
+.:,  :                F;;jjJ    ;FFUfUfjuuuuJ           .:    ;;  ,;:    ,f      ,  .,j;;f .   jFFFF
+                      :j;;U,  ,UJ;;:.,,,,;;;JJJf;:;   ,:j;..;f:;. ,. .         ::,  u.:,,, ,   ,ff: 
+           .JFFF:      ..,   U;;;;;;;ufUffjjufUJFFFFFFJ::;:;:f; U.  .J   ,   :;           .:        
+           :F:JFF;   .F.    fJUffjfufujjfffUJfFJUfjJ;;;.FFFJ.;,      J  :  ,:.                      
+            ;FFJF,        uFJjjfjUUUJJJJjjf;;: :.: .. ,uFFF;,; j: ,  F                              
+             :j;j       uFFFFUFUUuu;,, :, :,.: .      :FFFf.;;;.;:;;;  J          ,   .:            
+                      ;FJ;;,., .. ., ;        .       .FFF,:  FF;ju;,:FF    .:    ,. ..,     .;     
+                  .    ,.                   ,      .,,;FFU.; JF,.FF ..,                             
+                   ,       :,.        JFFFF,FF . ,.,;;;;;,,  FUJFF                                  
+                   ..   :FFFFFFu   ,Fu:FFFF:FF;.         .j   :;;,        :JFFFFF,   ;;             
+                       UFFF ,FFFF  jFFfFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF.FFFFFFFFFFFFFFF,           
+                      FFFu    FFFj;FF         ... ... .              jFFFFFFFf  fFFFFFFFf  u        
+                     JFF,      FFJJF; fu;;f. ;FF      ,fujujfUuuujf  ,FFFFFF,     JFFFFu   j.       
+                    :FFf       .FFFFu FFFFF. FFFJfFF  JjfuuJFFU;jjfj ,FFFF:,       Ff               
+                    FFF.;; . uF :FFFf  ;Ff  FFFUUFFF :FF,;:,FF.:,;FF ,FFFF ;.   f: F.               
+                   FFF:      .:  FFFf FFFFF;FF  .FFU  ;; .,:FF::..Uf ,FJ.U        .F                
+                 ;FFFFF         ;FFFj jFFF;     FFF  .JJFFFF:;FFFFFF ,FF ., ,    .:  .              
+               FFFFFFFFF,:,..,.;FFFFU  :Ff    ,FFF;   f:uju;;;;;u:,, :FF .  :;Ju,;                  
+               ;FFFFFFF  .;F:.  FFFFu :FFFFF FFFFFFJ.  FfjujjfuufFF  ;FF,     ;  .                  
+                 .FFFFF    ,    FFFFu FFU;.JFFF: JFFJ   Ufj;;,;JFFF  :FF   .  . ,,                  
+                    ;;;   :   , f ;Ff       :.    .,    ,::;;uufjU   ;FF .,, ,. u,                  
+                      .;  :   ,:  fFJ  ,Ff.             .Ju  fF.  ;  :FF  ,  ,  :.                  
+                      ,.  :    :  UFU  FFFFFFFFFFFFFF   FF;  FF; fFF ,FF. .  :  .,                  
+                      j.  ;    f  JFf FF;   .FFF   .   JFF   fFF.:FF :FF,    :  ::                  
+                      u   :    ;  UFU  UFUFFFFFFFFFF  FFFF FFFFFFFFJ :FF.    :  ,                   
+                      .   :    .  UFJ  ,FF:,:FFF,,::  FFFF ..,FF     :FF fJFFFFuf                   
+                      FFFuu;;;UF  fFU :FFF,.,FFF..,:;   FF    FF,    ;FF jFFFFFFF;                  
+                     FFFFFFFFFFFF uFU FFFFFFFFFFFFFFF   FF    fFF  ; ,FF .FFFFFFFF                  
+                    FFFFFFFFFFFFFjjFf        FFF        FF     FFFFF ,FF  FFFJ FFF;                 
+                     ;FFFFFFFFFJ  fFU        Uf;        JU      :j;  .FF  FFFu :FF.                 
+                      . u::Uuf    FFF;ufjfjj;;;;;jjfjfuu;;;jffu;:;::;FFF  ;FF. FF                   
+                                  uFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFJFF  .FFfFJ                    
+                     ,;:   :,                                              FFF,                     
+                     .,    :;     ;FJ  ,u  F; FJF  , ;F ,FF, . .Fu fFJ    .FF                       
+                   .,j,    ,.     :;F..F:F ff F;.  ; ,F .;F; ; F:F;Uu:    ;:,                       
+                   ,;U    :J;     ,FF  FfF F; UFF ., ;F  FF. : jFF..FF.   ,u:,.                     
+                                   .           .         .                    .                     
+                   :; u; ;,,:  ;;  :,:u     .  .:uf :,., . .f .:;;, ::;;,,;:;  :u:.                 
+                   FFFFF;F    :FF        (c) FJU x NTU MikeZheng        jjFFFujFFFF                 
+                   uJ:F; F.., :,.: .;J: .j, :, F;,U..,F: u,:J.,jJu: Ufjj,;fuF  J;J,                 
+
+
+
+    -->
+<html>
+<head>
+    <title>輔仁大學校慶90週年</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="assets/js/main.js">
+    </script>
+</head>
+<body>
+    <div id="cntain">
+        <div id="mainNavbar">
+            <div class="navbar-all">
+                <div class="container connav">
+                    <div class="topic"></div>
+                    <nav class="first"></nav>
+                    <nav class="second">
+                        <div class="borderb">
+                            <div >
+                                <div class="headScro hidden"><img alt=
+                                "輔仁大學校慶90年logo" class="img-responsive logo2"
+                                src="assets/img/logo.png"></div>
+                                <nav class="nav navbar-default">
+                                    <div class="container navrwd">
+                                        <div class="navbar-header">
+                                            <button class=
+                                            "navbar-toggle rwdBTN" data-target=
+                                            "#myNavbar" data-toggle="collapse"
+                                            type="button">
+                                            <div class="clickIco">
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </div>玖零年代</button> <a class=
+                                            "navbar-brand" href="#"></a>
+                                        </div>
+                                        <div class="collapse navbar-collapse"
+                                        id="myNavbar">
+                                            <ul class="nav navbar-nav">
+                                                <li class="hidden">
+                                                    <a href="#page-top"></a>
+                                                </li>
+                                                <li>
+                                                    <a class="pageChange" href=
+                                                    "#page1"><span class=
+                                                    "underline">關於玖零</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="pageChange" href=
+                                                    "#page2"><span>時光迴廊</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="pageChange" href=
+                                                    "#page3"><span>攤位介紹</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="pageChange" href=
+                                                    "#page4"><span>特色資訊</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="pageChange" href=
+                                                    "#page5"><span>才藝舞台</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="pageChange" href=
+                                                    "#page6"><span>活動紀錄</span></a>
+                                                </li>
+                                                <li>
+                                                    <a class="pageChange" href=
+                                                    "#page7"><span>聯絡我們</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="container page">
+                <div>
+                    <br>
+                </div>
+                <div id="page1">
+                    <div>
+                        <br>
+                        <br>
+                    </div><!--<h2>關於玖零</h2>-->
+                    <hr>
+                    <h2 class="h2Title">關於玖零</h2>
+                    <div class="row">
+                        <div class="col-md-6"><img alt="關於玖零poster" class=
+                        "poster img-responsive" src=
+                        "assets/img/page1.jpg"></div>
+                        <div class="col-md-6">
+                            <p>玖零年代主題概念:</p>
+                            <p>「本次校慶園遊會以「致青春,我們的『玖零‧年代
+                            』」為主題。青春,是每個人生命中最精采的時分;大學,是裝載精采青春最豐沛的容器;輔仁大學已建校90年,90年的時光,由所有教職員生和校友們一點一滴累積而成。活動當日彷彿回到時光隧道般,一同在輔大回味青春最美好的回憶,勾劃未來最精彩的夢想。」</p>
+                            <p>宣傳概念影片:</p><a id=
+                            "videolink">https://goo.gl/8AkkbP</a>
+                            <p>官方粉絲專頁:輔仁大學-校慶園遊會</p><a href=
+                            "https://www.facebook.com/FJU51/?fref=ts">https://www.facebook.com/FJU51/?fref=ts</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="page2">
+                    <div class='space'></div><!--<h2>時光迴廊</h2>-->
+                    <hr>
+                    <h2 class="h2Title">時光迴廊</h2>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div><img alt="" class="p2coolCard" src=
+                            "assets/img/p2_1.png"></div>
+                        </div>
+                        <div class="col-md-7">
+                            <h3>走入</h3>
+                            <p class="p2Article"><strong>《過去》</strong><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            真善美聖、焯炤館、風華再現廣場、小巴黎、中美堂、圓環......<br>
+                            90年,從輔仁大學創校以來已邁入第90個年頭,可是你認識輔大多少面貌呢?<br>
+                            <br>
+                            時間會改變許多事情,可是卻改不了我們腦海中的回憶。<br>
+                            <br>
+                            輔大90周年,讓我們乘著時光機,走進時光隧道,一同踏入輔大的過去,在校慶當天用舒德樓旁邊的木平台上的大型拼貼牆將藏在記憶深處的回憶逐漸拼湊吧!<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div><img alt="" class="p2coolCard2" src=
+                            "assets/img/p2_2.png"></div>
+                        </div>
+                        <div class="col-md-7">
+                            <p class="p2Article"><strong>《現在》</strong><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            嘿!你多久沒回來學校看看了呢?<br>
+                            時間會改變許多事情,可是卻改不了我們對於輔大的情感連結。<br>
+                            <br>
+                            隨著時間推移,我們在這裡相遇,交織出屬於我們的青春,屬於我們的輔大生活<br>
+                            在校慶這天公伯樓前的大道上會有許多文創跟二手市集,還有輔大90周年玖零年代記念大學踢唷!<br>
+                            <br>
+                            這些都是屬於輔大的青春進行式,在校慶當天讓我們青春的繼續延續吧,與過去相逢,與現在相遇,共同利用大頭貼機拍下這值得紀念的一刻!<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div><img alt="" class="p2coolCard" src=
+                            "assets/img/p2_3.png"></div>
+                        </div>
+                        <div class="col-md-7">
+                            <p><strong>《未來》</strong><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;哈囉!未來的我,你會是甚麼樣子呢?<br>
+
+                            <br>
+                            時間會改變很多事情,同時也會帶給我們更多。<br>
+                            <br>
+                            對於學生的我們來說,未來是甚麼?畢業後的我們又會在哪裡呢?我們會滿意自己的生活嗎?<br>
+                            <br>
+                            帶著疑問入學,帶著疑問畢業,這似乎是一個常態了...<br>
+                            但這些在每位畢業的學長姐身上的已經有答案了<br>
+                            在這值得慶祝的一天,邀請你一同來看看、來聽聽關於這些<br>
+                            <br>
+                            未來的答案。</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="page3">
+                    <div class='space'></div><!--<h2>攤位介紹</h2>-->
+                    <hr>
+                    <h2 class="h2Title">攤位介紹</h2>
+                    <div class="w100"></div>
+                    <div class="row"><img alt="" class="w100" src=
+                    "assets/img/map.svg"></div>
+                    <div>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5"><img alt="" class="p3Photo" src=
+                        "assets/img/p3_1.jpg"></div>
+                        <div class="col-md-7">
+                            <h2>【光陰市集--二手創意市集】</h2>
+                            <p><strong>地點:公伯樓前閃光大道</strong><br>
+                            <br>
+                            很多人認為「剩下來」是不好的,「舊式的」是過時的,然而這些不完美,可能反而是美好的
+                            !你不需要的,對別人來說可能是嚮往已久的,比如說一時衝動買的不合身的上衣、特賣時硬
+                            買的小半號的高跟鞋、或是在書櫃塵封已久的書籍,對於別人而言可能都是美好的。你家也有
+                            嗎?剩餘的或是舊式的美好!</p>
+                        </div>
+                    </div>
+                    <div>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5"><img alt="" class="p3Photo" src=
+                        "assets/img/p3_2.jpg"></div>
+                        <div class="col-md-7">
+                            <h2>【巷口的柑仔店--美食行政區】</h2>
+                            <p><strong>地點:中美堂周邊與風華廣場</strong><br>
+                            <br>
+                            小時候阿嬤家後面有間廟,只要阿嬤去拜拜,我就一定要跟,因為是廟口總是有好吃好玩又好買的攤販,阿嬤都讓我吃飽喝足再回家,那是我最懷念的童年回憶。高中時放學後,跟同學走在補習班的路上,手拿一杯手搖飲料和一片雞排,聊著今天考試很難、隔壁班的男生鬧了什麼笑話,那是當時放學的小確幸。不同年代都有各自的特別回憶,不變的是,我們能一起吃著好吃的東西,笑談當時的快樂!今年90週年美食市集,讓我們一起重溫兒時的喜悅,體驗市集最可愛的濃濃人情味,錯過難再得!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="page4">
+                    <div class='space'></div><!--<h2> 特色資訊</h2>-->
+                    <hr>
+                    <h2 class="h2Title">特色資訊</h2>
+                    <div class="row">
+                        <div class="col-md-5"><img alt="" class="p3Photo" src=
+                        "assets/img/p4_1.jpg"></div>
+                        <div class="col-md-7">
+                            <h2>【校園小畫家 - 彩繪柏油路】</h2>
+                            <p><strong>地點:公伯樓前閃光大道</strong><br>
+                            曾經在國中或是高中時期在黑板上亂畫畫嗎?或是在筆記本上留下一些插圖,隨心所欲的畫畫也是過去無憂無慮的學生時代常做的事情,和我們一起拿著粉筆,在輔大校園裡揮灑我們的青春。</p>
+                        </div>
+                    </div>
+                    <div>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5"><img alt="" class="p3Photo" src=
+                        "assets/img/p4_2.jpg"></div>
+                        <div class="col-md-7">
+                            <h2>【服務型社團成果展】</h2>
+                            <p><strong>地點:進入閃光大道轉角處</strong><br>
+                            【繪本角】<br>
+                            故事是小時候每個人共同的記憶,可能小時候聽很多童話故事,長大後聽了很多真實的故事,用說故事喚起輔大人對過去的記憶。<br>
+
+                            <br>
+                            【創意巧手角】<br>
+                            紙藝人偶、不織布聖誕樹裝飾、串珠、中國繩、羊毛氈、布藝等DIY活動讓經過的人或小孩能在此帶走一個屬於自己的紀念品。<br>
+
+                            <br>
+                            【服務性成果展】<br>
+                            展示一年以來服務的成果,作為一個認識服務的平台,帶著大家認識服務對象的需要,和我們付出的理由。</p>
+                        </div>
+                    </div>
+                    <div>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5"><img alt="" class="p3Photo" src=
+                        "assets/img/p4_3.png"></div>
+                        <div class="col-md-7">
+                            <h2>【多元文化區】</h2>
+                            <p><strong>地點:利瑪竇大樓面風華再現廣場側</strong><br>
+                            此活動有五大體驗區,非別為僑聯、陸聯、港澳、馬來西亞、台灣原民區,提供印尼傳統樂器、中國區域特色小吃、港澳特色美食、馬來西亞美食、原住民體驗DIY與美食,至各攤位體驗當地文化後,可免費繪製印度手繪,希望能讓大家體驗不同文化風情。</p>
+                        </div>
+                    </div>
+                    <div>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5"><img alt="" class="p3Photo" src=
+                        "assets/img/p4_4.jpg"></div>
+                        <div class="col-md-7">
+                            <h2>【輔仁90校慶形象大使 - Rise & Shine】</h2>
+                            <p><strong>地點:積健樓前面</strong><br>
+                            為慶祝輔仁大學創校90週年,徵選出16位校慶形象大使,進行歌曲錄製、MV與年曆拍攝,以精裝【輔大校慶紀念盒】形式推出,作為公益募款商品,延續往年公益性質,將愛與關懷送到各個角落。</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="page5">
+                    <div class='space'></div><!--<h2>才藝舞台</h2>-->
+                    <hr>
+                    <h2 class="h2Title">才藝舞台</h2>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>活動順序</th>
+                                <th>活動介紹</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="width:30%;">競技拉拉隊 MARS</td>
+                                <td>我們陣容堅強、熱情如火,展現無比的青春活力,絕對讓觀眾捨不得眨眼。</td>
+                            </tr>
+                            <tr>
+                                <td>熱舞社</td>
+                                <td>【一早的美好我要帶給您】<br>文字透過人類的拼湊才感人,音樂經由人類的肢體而生動,
+                                我們伴隨音樂用四肢訴說情感表現情緒,音樂藉由我們化作視覺感染觀眾,聽覺到視覺的轉換器,我們是輔大熱舞社!</td>
+                            </tr>
+                            <tr>
+                                <td><strong>開幕</strong></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>民謠吉他社</td>
+                                <td>【孤島】<br>
+                                這首歌是獻給台灣的。</td>
+                            </tr>
+                            <tr>
+                                <td>手語社</td>
+                                <td>【淋雨找自己】<br>
+                                結合這次校慶主題,將90年代歌曲與現今流行歌曲重行組合,利用手語作為媒介加入活力,動感等元素,呈現屬於我們的熱血青春回憶。</td>
+                            </tr>
+                            <tr>
+                                <td>基層文化服務社</td>
+                                <td>【妙妙妙】<br>
+                                我們選擇表演晨操代表社團,展現活力又熱情的一面。</td>
+                            </tr>
+                            <tr>
+                                <td>國際標準舞蹈</td>
+                                <td>【恰恰舞蹈表演】<br />
+                                國標社要為大家帶來兩支俏皮可愛的恰恰恰表演,第一支恰恰恰將以三人舞來呈現,有別於以往國標給人雙人舞的既定印象,希望帶給大家耳目一新的感受。希望藉由這兩支輕快活潑的舞蹈表演,讓大家感受到輔大的活力與熱情,也希望各位和我們一同歡慶輔大90歲的生日。Happy Birthday~~~</td>
+                            </tr>
+                            <tr>
+                                <td>搖滾音樂研究社</td>
+                                <td>【For My Own Sake】<br>
+                                幾乎全由輔大學生組成的樂團，藉由自行創作歌曲再加上現在當紅樂團的當紅歌曲，來展示學生的活力、聲音，以及對未來的抱負。</td>
+                            </tr>
+                            <tr>
+                                <td>體育系學會</td>
+                                <td>【舞鈴】</td>
+                            </tr>
+                            <tr>
+                                <td>嚕拉拉社</td>
+                                <td>【嚕在青春相遇時】<br>
+                                以類似歌舞青春的方式呈現一首歌，加上魯拉拉特有的嚕哥，機他伴奏，展現校園民歌時期的風格。</td>
+                            </tr>
+                            <tr>
+                                <td>映綠世界舞蹈社</td>
+                                <td>【泰國歡樂舞】<br>
+                                這次帶來的舞是泰國歡樂舞，可以近距離體驗泰國皇室風情。</td>
+                            </tr>
+                            <tr>
+                                <td>原資中心</td>
+                                <td>【星火燎原】<br>
+                                傳統歌謠，有吉他跟鼓，還有傳統舞蹈。</td>
+                            </tr>
+                            <tr>
+                                <td>輔仁大學僑生聯誼會</td>
+                                <td>【印尼傳統文化】<br>
+                                五首傳統民謠以合唱及樂器穿插表演，下半部則是以傳統舞蹈方式呈現。</td>
+                            </tr>
+                            <tr>
+                                <td>肚皮舞社</td>
+                                <td>【舞孃神鼓】<br>
+                                  舞者們的姿態隨著音樂的起伏而千變萬化,仿佛化為一體,撼動人心的究竟是音樂還是舞姿?</td>
+                            </tr>
+                            <tr>
+                                <td>搖滾音樂研究社</td>
+                                <td>【肥雞俱樂部】<br></td>
+                            </tr>
+                            <tr>
+                                <td>數位音樂研究社</td>
+                                <td>【live show】<br>
+                                一開始約四分鐘的live mashup
+                                remix作為開場，再以四分鐘的口技組與教學長合作之表演作結束。</td>
+                            </tr>
+                            <tr>
+                                <td>國樂社</td>
+                                <td>【聖誕組曲加採茶歌】<br />
+                                  12月的初冬,聖誕的接近,點燈之後,接近的重要時分原來是這一天,今天是輔大復校的90歲生日,蔚風國樂社帶來聖誕組曲和採茶歌,藉此傳達對輔大,我們的校園,的感謝和支持。
+                                   <br/>第一首是聖誕組曲:不同於以往常聽到的聖誕歌曲,本曲是用中國樂器所演奏帶來不一樣的視聽感官。 
+                                    <br/>第二首是採茶歌 此曲本是客家民謠 在這個歡樂的校慶中國樂社用這首歡快的曲子祝輔大生日快樂
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>魔術社</td>
+                                <td>【魔術表演】<br />
+                                Magic~!</td>
+                            </tr>
+                            <tr>
+                                <td><strong>校慶年曆大使</strong></td>
+                                <td>為慶祝輔仁大學創校90週年,徵選出16位校慶形象大使,進行歌曲錄製、MV與年曆拍攝,以精裝【輔大校慶紀念盒】形式推出,作為公益募款商品,延續往年公益性質,將愛與關懷送到各個角落。</td>
+                            </tr>
+                            <tr>
+                                <td>映綠世界舞蹈社</td>
+                                <td>【南洋皇室風情】<br>
+                                印度寶萊塢的kajarale舞。</td>
+                            </tr>
+                            <tr>
+                                <td>民謠吉他社</td>
+                                <td>【達爾文】<br>
+                                被愛篩選的過程裡，我們學會認真，學會忠誠 適者生存，不適者淘汰 愛，永遠無法讓人明白
+                                吉他，歌聲，達爾文。 獻給在愛裡前進的你們，成為更好的人。</td>
+                            </tr>
+                            <tr>
+                                <td>搖滾音樂研究社</td>
+                                <td>【信舜狗狗】<br>
+                                我們是搖研社的一群Jam人，不懂爵士，但很想了解，不是一個團，沒有固定班底，歡迎有興趣的朋友來搖研找我們玩。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>旺福表演</strong></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><strong>閉幕</strong></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="page6">
+                    <div class='space'></div><!--<h2>活動紀錄</h2>-->
+                    <hr>
+                    <h2 class="h2Title">活動紀錄</h2>
+                    <div id="jssor_1" style=
+                    "position: relative; margin: 0 auto; top: 0px; left: 0px; width: 800px; height: 456px; overflow: hidden; visibility: hidden; background-color: #24262e;">
+                    <!-- Loading Screen -->
+                        <div data-u="loading" style=
+                        "position: absolute; top: 0px; left: 0px;">
+                            <div style=
+                            "filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;">
+                            </div>
+                            <div style=
+                            "position:absolute;display:block;background:url('assets/img/home/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;">
+                            </div>
+                        </div>
+                        <div data-u="slides" style=
+                        "cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 550px; overflow: hidden;">
+                        <div data-p="144.50" style="display: none;">
+                            <img data-u="image" src="assets/img/home/01.jpg">
+                            <img data-u="thumb" src=
+                            "assets/img/home/thumb-01.jpg"></div>
+                            <div data-p="144.50" style="display: none;">
+                            <img data-u="image" src="assets/img/home/02.jpg">
+                            <img data-u="thumb" src=
+                            "assets/img/home/thumb-02.jpg"></div>
+                            <div data-p="144.50" style="display: none;">
+                            <img data-u="image" src="assets/img/home/03.jpg">
+                            <img data-u="thumb" src=
+                            "assets/img/home/thumb-03.jpg"></div>
+                            <div data-p="144.50" style="display: none;">
+                            <img data-u="image" src="assets/img/home/04.jpg">
+                            <img data-u="thumb" src=
+                            "assets/img/home/thumb-04.jpg"></div>
+                            <div data-p="144.50" style="display: none;">
+                            <img data-u="image" src="assets/img/home/05.jpg">
+                            <img data-u="thumb" src=
+                            "assets/img/home/thumb-05.jpg"></div>
+                            <div data-p="144.50" style="display: none;">
+                            <img data-u="image" src="assets/img/home/06.jpg">
+                            <img data-u="thumb" src=
+                            "assets/img/home/thumb-06.jpg"></div>
+                            <div data-p="144.50" style="display: none;">
+                            <img data-u="image" src="assets/img/home/07.jpg">
+                            <img data-u="thumb" src=
+                            "assets/img/home/thumb-07.jpg"></div>
+                            <div data-p="144.50" style="display: none;">
+                            <img data-u="image" src="assets/img/home/08.jpg">
+                            <img data-u="thumb" src=
+                            "assets/img/home/thumb-08.jpg"></div>
+                            <div data-p="144.50" style="display: none;">
+                            <img data-u="image" src="assets/img/home/09.jpg">
+                            <img data-u="thumb" src=
+                            "assets/img/home/thumb-09.jpg"></div>
+                            <div data-p="144.50" style="display: none;">
+                            <img data-u="image" src="assets/img/home/10.jpg">
+                            <img data-u="thumb" src=
+                            "assets/img/home/thumb-10.jpg"></div>
+                            <div data-p="144.50" style="display: none;">
+                            <img data-u="image" src="assets/img/home/11.jpg">
+                            <img data-u="thumb" src=
+                            "assets/img/home/thumb-11.jpg"></div>
+                            <div data-p="144.50" style="display: none;">
+                            <img data-u="image" src="assets/img/home/12.jpg">
+                            <img data-u="thumb" src=
+                            "assets/img/home/thumb-12.jpg"></div>
+                        </div><!-- Thumbnail Navigator -->
+                        <div class="jssort01" data-autocenter="1" data-u=
+                        "thumbnavigator" style=
+                        "position:absolute;left:0px;bottom:0px;width:800px;height:100px;">
+                        <!-- Thumbnail Item Skin Begin -->
+                            <div data-u="slides" style="cursor: default;">
+                                <div class="p" data-u="prototype">
+                                    <div class="w">
+                                        <div class="t" data-u=
+                                        "thumbnailtemplate"></div>
+                                    </div>
+                                    <div class="c"></div>
+                                </div>
+                            </div><!-- Thumbnail Item Skin End -->
+                        </div><!-- Arrow Navigator -->
+                        <span class="jssora05l" data-u="arrowleft" style=
+                        "top:158px;left:8px;width:40px;height:40px;"></span>
+                        <span class="jssora05r" data-u="arrowright" style=
+                        "top:158px;right:8px;width:40px;height:40px;"></span>
+                        <a href="" style="display:none"></a>
+                    </div><!-- #endregion Jssor Slider End -->
+                    <!--2-->
+                </div>
+                <div class="p7textcenter" id="page7">
+                    <div class='space'></div><!--<h2>聯絡我們</h2>-->
+                    <hr>
+                    <h2 class="h2Title">聯絡我們</h2>
+                    <div class="p7textcenter">
+                        <h2>天主教輔仁大學 學務處</h2>
+                        <h3>輔仁大學課外活動指導組</h3>
+                        <h3>校慶園遊會籌備團隊</h3>
+                        <hr>
+                        <p><i class=
+                        "glyphicon glyphicon-user"></i>&nbsp;&nbsp;輔導助教 - 陳彥儒
+                        助教<br></p>
+                        <p><i class=
+                        "glyphicon glyphicon-envelope"></i>&nbsp;&nbsp;088800@mail.fju.edu.tw<br>
+                        </p>
+                        <p><i class=
+                        "glyphicon glyphicon-earphone"></i>&nbsp;&nbsp;2905-2000分機3079<br>
+                        </p>
+                        <hr>
+                        <p></p>
+                        <p><i class=
+                        "glyphicon glyphicon-user"></i>&nbsp;&nbsp;總召 - 莊皓鈞
+                        同學<br></p>
+                        <p><i class=
+                        "glyphicon glyphicon-envelope"></i>&nbsp;&nbsp;leo556612g@gmail.com<br>
+                        </p>
+                        <p><i class=
+                        "glyphicon glyphicon-earphone"></i>&nbsp;&nbsp;0938339993<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="container">
+                    <div class="inner">
+                        <div id="footer-copyright">
+                            © FJU 2015 <a href="https://github.com/Mike-Zheng"
+                            target="_blank">Mike Zheng</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div aria-hidden="true" aria-labelledby="myModalLabel" class=
+            "modal fade" id="fjuModal" role="dialog" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button aria-hidden="true" class="close"
+                            data-dismiss="modal" type="button">×</button>
+                        </div>
+                        <div class="Mocenter">
+                            <iframe allowfullscreen="" frameborder="0" height=
+                            "315" src="" width="560"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
