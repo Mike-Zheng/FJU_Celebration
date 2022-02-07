@@ -14,7 +14,7 @@ MikeZheng
 License
 ----
 
-NTU x FJU
+FJU
 
 
 **(c) 2015**
